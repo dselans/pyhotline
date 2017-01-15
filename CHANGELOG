@@ -1,0 +1,37 @@
+01-27-2013  v0.3.0  Daniel Selans
+---------------------------------
+Email reports now include the associated .gsm files as attachments.
+Cepstral's Swift is now the only supported TTS engine.
+All interactive prompts are now interruptible.
+
+08-27-2012  v0.2.0  Daniel Selans
+---------------------------------
+Added 'Flite' TTS engine support (http://asterisk-flite.sourceforge.net/).
+Note: When testing 'Flite', I ran into a strange issue where the TTS engine
+would stop processing any further text if it ran into a comma. 
+
+Added 'max_attempts'; this functionality allows you to set the number of call
+attempts that will be made for an unresolved issue. Setting this value to 0
+will cause pyhotline to call scheduled/emergency contacts until the issue
+has been accepted.
+
+Random bugfixes and code clean up:
+    - updateStatus() wasn't updating the 'employee' column
+    - Cleaned up some of the log messages
+    - Added some additional info to the email notification template
+
+Other random notes/ideas:
+    - Option to email audio messages as attachments if 'email_notify' is set
+
+07-17-2012  v0.1.9  Daniel Selans
+---------------------------------
+First release!
+
+Some random ideas for future releases:
+    - Definable pin_length in the config (currently hard coded to 5 digits)
+    - Festival support, possibly another TTS engine?
+    - SQL backend support 
+    - Scriptable text-to-speech prompts
+    - Custom email templates
+    - SMS based notifications
+    - Unavoidable bug fixes
